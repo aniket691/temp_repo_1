@@ -1,0 +1,36 @@
+Docker Commands
+sudo apt update
+sudo apt install docker.io
+git clone https://github.com/RaviTambade/tflstore.git
+cd tflstore
+sudo docker build -t tflimage .
+sudo docker run --name your_image_name -d -p 8000:8000 tflimage
+sudo docker images
+sudo docker ps
+
+Git
+#!/bin/bash
+# Initialize a Git repository
+git init
+# Create a new branch (branch1) and switch to it
+git checkout -b branch1
+# Create a new file in branch1
+echo "Content for file1 in branch1" > file1.txt
+# Add and commit file1 to branch1
+git add file1.txt
+git commit -m "Added file1 to branch1"
+# Switch to the main branch
+git checkout main
+# Create a new branch (branch2) from main and switch to it
+git checkout -b branch2
+# Create a new file in branch2
+echo "Content for file2 in branch2" > file2.txt
+# Add and commit file2 to branch2
+git add file2.txt
+git commit -m "Added file2 to branch2"
+# Switch back to the main branch
+git checkout main
+# Merge branch1 into main
+git merge branch1
+# Merge branch2 into main
+git merge branch2
