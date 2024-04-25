@@ -1,0 +1,108 @@
+# read size
+
+# for (( i=0; i < size; i++ )); do
+#     for(( j=size; j>i; j-- )); do
+#         echo -n "*"
+#     done
+#     echo ""
+# done
+   
+#square
+# read size
+
+# for(( i=0; i<size; i++)); do
+#     for (( j=0; j<size; j++ )); do
+#         echo -n "*"
+#     done
+# echo "" 
+# done
+
+#left triangle
+# read size
+# for(( i=0; i<size; i++)); do
+#     for(( j = 0; j<i; j++)); do 
+#         echo -n "*"
+#     done
+# echo ""
+# done
+
+#left down
+# read size
+# for (( i=0; i<size; i++ )); do
+#     for (( j=size-1; j>=i; j--)); do
+#         echo -n "*"
+#     done
+# echo ""
+# done
+
+#right triangle
+#trick:
+    # draw left triangle
+    # replace <i with size-i
+# read size
+# for(( i=0; i<size; i++)); do
+#     for(( j = 0; j<(size-i-1); j++)); do 
+#         echo -n " "
+#     done
+#     for (( k=0; k<=i; k++ )); do
+#         echo -n "*"
+#     done
+# echo ""
+# done
+
+# right down
+# read size
+# for (( i=0; i<size; i++ )); do
+#         for (( j=1; j<=i; j++ )); do
+#             echo -n " "
+#         done
+#         for (( k=size-1; k>=i; k-- )); do
+#             echo -n "*"
+#         done
+# echo ""
+# done
+
+#pyramid
+# read size
+# for ((i=0; i<size; i++)); do
+#     for (( j=0; j <(size-i-1); j++)); do
+#         echo -n " "
+#     done
+#     for (( j=0; j<(2*i)+1; j++ )); do
+#         echo -n "*"
+#     done
+# echo "" 
+# done
+
+#inverted pyramid
+# read size
+# for (( i=0; i<size; i++ )); do
+#     for (( j=0; j<i; j++ )); do
+#         echo -n " "
+#     done
+#     for (( k=0; k < 2*(size-i)-1; k++ )); do
+#         echo -n "*"
+#     done
+# echo ""
+# done
+
+#diamond patt
+# read size
+# for (( i=0; i <size; i++ )); do
+#     for (( j=size; j>i; j-- )); do
+#         echo -n " "
+#     done
+#     for (( k=0; k < (i*2)-1; k++ )); do
+#         echo -n "*" 
+#     done
+#     echo ""
+# done
+# for (( i=1; i<=size-1; i++)); do
+#         for (( j=0; j<i; j++ )); do    
+#             echo -n " "
+#         done
+#         for (( k=(size-i)*2-1; k>0; k-- )); do
+#             echo -n "*"
+#         done
+#     echo "" 
+# done
