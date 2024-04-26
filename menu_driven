@@ -1,0 +1,47 @@
+database="database.txt"
+
+while true; do
+        echo "1. Add Record"
+        echo "2. Delete Record"
+        echo "3. Find Record"
+        echo "4. Exit"
+
+        read -p "Enter your choice" choice
+
+        case $choice in
+        1)
+                echo "enter roll no"
+                read rollno
+                echo "enter name"
+                read name
+                echo "enter sem"
+                read sem
+                echo "enter marks1"
+                 echo "enter marks2"
+                read marks2
+                echo "enter marks"
+                read marks3
+
+                echo "$rollno $name $sem $marks1" >> $database
+                echo "Record deleted successfully"
+                ;;
+        2)
+                echo "Enter rol no to delete"
+                read rollno
+                sed -i "/^$rollno/d" $database
+                echo "Record deleted sucessfully"
+                ;;
+        3)
+                echo "Enter roll no to filed"
+                read rollno
+                grep -i "$rollno" $database
+4)
+                echo "Exiting..."
+                exit 0
+                ;;
+        *)
+                echo "Invalid option!"
+                ;;
+esac
+done
+
