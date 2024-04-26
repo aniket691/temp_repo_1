@@ -7,6 +7,8 @@ sudo docker build -t tflimage .
 sudo docker run --name your_image_name -d -p 8000:8000 tflimage
 sudo docker images
 sudo docker ps
+sudo docker pull nginx
+sudo docker run --name abcd -d -p 8080:80 nginx
 
 Git
 #!/bin/bash
